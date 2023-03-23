@@ -1,0 +1,59 @@
+<div class="split">
+
+    <form nz-form [formGroup]="validateForm" class="centered" (ngSubmit)="submitForm()">
+
+        <nz-space nzDirection="vertical">
+            <div class="space">
+                <label class="heading">Login</label>
+               
+            </div>
+            <div  class="space">
+                <label>Please login into your account</label>
+            </div>
+            <button class="button button1">
+                
+                Sign in with Google</button>
+            
+            <label>Username : </label>   
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your username!">
+                    <nz-input-group nzPrefixIcon="user" >
+                        <input type="text" nz-input formControlName="userName" placeholder="Username" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <label>Password : </label>
+            <nz-form-item>
+               
+                <nz-form-control nzErrorTip="Please input your Password!">
+                    <nz-input-group nzPrefixIcon="lock">
+                        <input type="password" nz-input formControlName="password" placeholder="Password" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <div nz-row class="login-form-margin">
+                <div nz-col [nzSpan]="12">
+                    <label nz-checkbox formControlName="remember">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+                <div nz-col [nzSpan]="12">
+                    <a class="login-form-forgot">Forgot password?</a>
+                </div>
+            </div>
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+            <div nz-row class="login-form-margin">
+          Not registered yet?
+            <a>  Create an Account</a>
+        </div>
+       </nz-space>
+    </form>
+
+</div>
+
+<div class="split right">
+    <div>
+        <img nz-image width="800px" height="700px" nzSrc="assets/images/Image.jpeg" alt="EShip" />
+
+    </div>
+</div>
